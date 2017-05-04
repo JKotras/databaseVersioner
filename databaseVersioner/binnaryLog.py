@@ -65,6 +65,7 @@ class BinnaryLog:
             params.append("--database=" + self.__databaseName)
         else:
             raise BinnaryLogException('Database name have to be set')
+        #params.append("--no-defaults")
 
         params.append(self.__filePath)
         data = TerminalCommand.runCommandRetStr(self.__command, params)
