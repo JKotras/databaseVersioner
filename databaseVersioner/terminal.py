@@ -105,7 +105,7 @@ class TerminalCommand:
         params = ' '.join(params)
         sp = subprocess.Popen(params, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         out, err = sp.communicate()
-        out = out.decode("utf-8").split("\n")
+        out = out.decode("utf-8", "ignore").split("\n")
         return out
 
     @staticmethod
@@ -121,7 +121,7 @@ class TerminalCommand:
         params = ' '.join(params)
         sp = subprocess.Popen(params, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         out, err = sp.communicate()
-        out = out.decode("utf-8")
+        out = out.decode("utf-8", "ignore")
         return out
 
     @staticmethod

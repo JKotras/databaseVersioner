@@ -21,7 +21,7 @@ class DatabaseDump:
         for table in tables.values():
             tableName = table.getValue('name');
             params = [self.__databaseName, "--user=" + self.__db.user, "--password=" + self.__db.password, "--triggers", "--skip-add-locks", "--skip-comments", "--force",
-                      "--add-drop-table", "--add-drop-trigger", tableName]
+                      "--add-drop-table", tableName]
             dump = TerminalCommand.runCommandRetStr(self.__command, params)
             #dump = utils.removeEmptyLinesFromSql(dump)
             tablesDump[tableName] = dump

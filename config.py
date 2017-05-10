@@ -10,10 +10,10 @@ config = {
     "mysqlbinlogLocation" : "/usr/bin/mysqlbinlog",
     "mysqldumpLocation": "/usr/bin/mysqldump",
 
-    "authorName": "honza",
+    "authorName": "databaseVersioner",
     "databaseHost": "localhost",
     "databasePort": 3306,
     "databaseName": "databaseVersioner",
     "databaseUser": "root",
-    "databasePassword": "noveheslo"
+    "databasePassword": "heslo"
 }
